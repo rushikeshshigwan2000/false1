@@ -72,7 +72,7 @@ def validate_emails(df):
             results.append([email.lower(), domain, True, True])
         else:
             results.append([None, domain, False, False])
-    return pd.DataFrame(results, columns=['Email', 'Domain', 'Domain Valid', 'Email Valid'])
+    return pd.DataFrame(results, columns=['Email', 'Domain', 'Email Valid'])
 
 # Streamlit UI
 # Center align title using Markdown and HTML
