@@ -69,7 +69,7 @@ def validate_emails(df):
         email, is_valid = validate_email_for_formats(first, last, domain)
         
         if email and is_valid:
-            results.append([email, domain, True, True])
+            results.append([email.lower(), domain, True, True])
         else:
             results.append([None, domain, False, False])
     return pd.DataFrame(results, columns=['Email', 'Domain', 'Domain Valid', 'Email Valid'])
