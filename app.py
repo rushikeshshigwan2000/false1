@@ -45,6 +45,9 @@ def generate_email_formats(first, last, domain):
         f"{first[0]}{last}@{domain}",
         f"{first}@{domain}",
         f"{last}@{domain}",
+        f"{first}{last[0]}@{domain}",
+        f"{first[0]}.{last}@{domain}",
+        f"{first}{last}@{domain}"
     ]
     return formats
 
